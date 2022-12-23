@@ -4,21 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="582e8deb-b069-441a-9b65-ba48d862130a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Amigma.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="582e8deb-b069-441a-9b65-ba48d862130a" name="Changes" comment="Start project,complete tableMap package there is two important class: UnsortedTableMap and SortedTableMap">
       <change afterPath="$PROJECT_DIR$/src/ReadFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TableMap/AbstractMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TableMap/Entry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TableMap/Map.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TableMap/SortedTableMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TableMap/UnsortedTableMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,8 +72,17 @@
       <updated>1671562298020</updated>
       <workItem from="1671562299453" duration="6318000" />
       <workItem from="1671606748691" duration="6328000" />
-      <workItem from="1671705824209" duration="7832000" />
+      <workItem from="1671705824209" duration="16142000" />
+      <workItem from="1671781985852" duration="1154000" />
     </task>
+    <task id="LOCAL-00001" summary="Start project,complete tableMap package there is two important class: UnsortedTableMap and SortedTableMap">
+      <created>1671719242784</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671719242784</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,5 +98,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Start project,complete tableMap package there is two important class: UnsortedTableMap and SortedTableMap" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start project,complete tableMap package there is two important class: UnsortedTableMap and SortedTableMap" />
   </component>
 </project>
