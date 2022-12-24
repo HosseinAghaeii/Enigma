@@ -45,6 +45,15 @@ public class UnsortedTableMap<K,V> extends AbstractMap<K,V>{
         return answer;
     }
 
+    public void rotate(){
+        MapEntry<K,V> entry = new MapEntry<>(table.get(table.size()-1).getKey(),table.get(table.size()-1).getValue());
+        remove(table.get(table.size()-1).getKey());
+        table.add(0,entry);
+    }
+    public V getIthValue(int i){
+        return table.get(i).getValue();
+    }
+
     private class EntryIterator implements Iterator<Entry<K,V>>{
         private int j=0;
         public boolean hasNext(){return j<table.size();}

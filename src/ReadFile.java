@@ -18,6 +18,10 @@ public class ReadFile {
     List<UnsortedTableMap<Integer,String>> plugBoard = new ArrayList<>();
     List<UnsortedTableMap<Integer,String>> rotors = new ArrayList<>();
 
+    private int rotorIndex1 = 0;
+    private int rotorIndex2 = 0;
+    private int rotorIndex3 = 0;
+
 
     public ReadFile() throws FileNotFoundException {
         plugBoard.add(new UnsortedTableMap<>());
@@ -45,6 +49,7 @@ public class ReadFile {
             scr.nextLine();
             scr.nextLine();
             scr.nextLine();
+            scr.nextLine();
         }
 
         return identify;
@@ -59,14 +64,13 @@ public class ReadFile {
             //System.out.println(Arrays.toString(s));
             char c0,c1;
             if (i==0){
-                 c0 = s[1].charAt(0);
-                 c1 = s[2].charAt(0);
+                plugBoard.get(0).put(i,s[1]);
+                plugBoard.get(1).put(i,s[2]);
             }else {
-                c0 = s[0].charAt(0);
-                c1 = s[1].charAt(0);
+                plugBoard.get(0).put(i,s[0]);
+                plugBoard.get(1).put(i,s[1]);
             }
-            plugBoard.get(0).put(i,s[0]);
-            plugBoard.get(1).put(i,s[1]);
+
            // System.out.println(c0+" "+c1);
         }
         return plugBoard;
@@ -91,9 +95,90 @@ public class ReadFile {
                  rotors.get(j).put(chars[i] - 97, str[i])  ;
                 //System.out.print(rotors.get(j).get(chars[i] - 97));
             }
-            System.out.println("--------");
+            //System.out.println("--------");
         }
         return rotors;
     }
+
+    public String decode(String encrypted){
+        String[] str = encrypted.split("");
+        StringBuilder sb  =new StringBuilder();
+        for (int i = 0; i < str.length; i++) {
+            char chr = str[i].charAt(0);
+            chr = plugBoardDecode(chr);
+            chr = rotor3Decode(chr);
+            chr = rotor2Decode(chr);
+            chr = rotor1Decode(chr);
+            chr = reflectorDecode(chr);
+            chr = rotor1Decode(chr);
+            chr = rotor2Decode(chr);
+            chr = rotor3Decode(chr);
+            chr = plugBoardDecode(chr);
+            sb.append(chr);
+            rotateRotor();
+        }
+        return sb.toString();
+    }
+
+    private char plugBoardDecode (char chr){
+        //boolean exist = false;
+        char answer = chr;
+        for (int i = 0; i < plugBoard.get(0).size(); i++) {
+            if (plugBoard.get(0).get(i).charAt(0)==chr){
+                //exist =true;
+                answer = plugBoard.get(1).get(i).charAt(0);
+                return answer;
+            }
+        }
+        for (int i = 0; i < plugBoard.get(1).size(); i++) {
+            if (plugBoard.get(1).get(i).charAt(0)==chr){
+                //exist =true;
+                answer = plugBoard.get(0).get(i).charAt(0);
+                return answer;
+            }
+        }
+        return answer;
+    }
+
+    private char rotor3Decode(char chr){
+        int j = chr-97;
+        return rotors.get(2).getIthValue(j).charAt(0);
+    }
+
+    private char rotor2Decode(char chr){
+        int j = chr-97;
+        return rotors.get(1).getIthValue(j).charAt(0);
+
+    }
+
+    private char rotor1Decode(char chr){
+        int j=chr-97;
+        return rotors.get(0).getIthValue(j).charAt(0);
+
+    }
+
+    private char reflectorDecode(char chr){
+        //int j = chr-97;
+        int k = 122-chr;
+        return reflector.get(k).charAt(0);
+    }
+
+    private void rotateRotor(){
+        rotorIndex3++;
+        if (rotorIndex3==26){
+            rotorIndex2++;
+            rotors.get(1).rotate();
+            rotorIndex3=0;
+        }
+        rotors.get(2).rotate();
+
+        if (rotorIndex2==26){
+            rotorIndex1++;
+            rotors.get(0).rotate();
+            rotorIndex2=0;
+        }
+    }
+
+
 
 }
