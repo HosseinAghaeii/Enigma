@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="582e8deb-b069-441a-9b65-ba48d862130a" name="Changes" comment="write methode menu." />
+    <list default="true" id="582e8deb-b069-441a-9b65-ba48d862130a" name="Changes" comment="write methode menu.">
+      <change beforePath="$PROJECT_DIR$/Anigma.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Enigma.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,19 +49,19 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Anigma" />
+      <module name="Enigma" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
-      <module name="Anigma" />
+      <module name="Enigma" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Anigma" />
+      <module name="Enigma" />
       <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -84,6 +86,7 @@
       <workItem from="1671705824209" duration="16142000" />
       <workItem from="1671781985852" duration="14888000" />
       <workItem from="1671870673213" duration="1661000" />
+      <workItem from="1671872540647" duration="651000" />
     </task>
     <task id="LOCAL-00001" summary="Start project,complete tableMap package there is two important class: UnsortedTableMap and SortedTableMap">
       <created>1671719242784</created>
